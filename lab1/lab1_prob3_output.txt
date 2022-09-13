@@ -1,0 +1,34 @@
+Result: 1 
+ Bell: 0, door_lock_actuator: 0, brake_actuator: 0, passenger_airbag_actuator: 0 
+Result: 2 
+ Bell: 0, door_lock_actuator: 0, brake_actuator: 0, passenger_airbag_actuator: 0 
+Result: 3 
+ Bell: 0, door_lock_actuator: 0, brake_actuator: 1, passenger_airbag_actuator: 0 
+Result: 4 
+ Bell: 1, door_lock_actuator: 0, brake_actuator: 0, passenger_airbag_actuator: 0 
+Result: 5 
+ Bell: 1, door_lock_actuator: 1, brake_actuator: 0, passenger_airbag_actuator: 0 
+Result: 6 
+ Bell: 1, door_lock_actuator: 0, brake_actuator: 0, passenger_airbag_actuator: 0 
+Result: 7 
+ Bell: 0, door_lock_actuator: 1, brake_actuator: 1, passenger_airbag_actuator: 0 
+Result: 8 
+ Bell: 0, door_lock_actuator: 0, brake_actuator: 0, passenger_airbag_actuator: 0 
+Result: 9
+ Bell: 1, door_lock_actuator: 0, brake_actuator: 0, passenger_airbag_actuator: 0
+Result: 10 
+ Bell: 0, door_lock_actuator: 0, brake_actuator: 0, passenger_airbag_actuator: 0
+Result: 11 
+ Bell: 0, door_lock_actuator: 0, brake_actuator: 0, passenger_airbag_actuator: 0
+Result: 12 
+ Bell: 0, door_lock_actuator: 1, brake_actuator: 0, passenger_airbag_actuator: 0
+Result: 13 
+ Bell: 0, door_lock_actuator: 0, brake_actuator: 1, passenger_airbag_actuator: 0
+Result: 14 
+ Bell: 0, door_lock_actuator: 0, brake_actuator: 0, passenger_airbag_actuator: 0
+Result: 15 
+ Bell: 0, door_lock_actuator: 0, brake_actuator: 0, passenger_airbag_actuator: 0
+Result: 16 
+ Bell: 0, door_lock_actuator: 0, brake_actuator: 0, passenger_airbag_actuator: 1
+Result: 17 
+ Bell: 0, door_lock_actuator: 0, brake_actuator: 0, passenger_airbag_actuator: 0
