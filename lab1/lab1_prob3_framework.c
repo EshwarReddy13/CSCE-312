@@ -21,6 +21,7 @@ run this file as : gcc -std=c99 filename.c -o executableName
 
 #include <stdio.h> //This is useful to do i/o to test the code
 
+
 unsigned int driver_on_seat;
 unsigned int driver_seat_belt_fastened;
 unsigned int engine_running;
@@ -37,19 +38,42 @@ unsigned int door_lock_actu = 0;
 unsigned int brake_actu = 0;
 unsigned int passenger_airbag_actu = 0;
 
+
 void read_inputs_from_ip_if(){
-	
-	// 1. Provide your input code here
-	// This function should read the current state of the available sensors (8 in total)
+    printf("Test: \n");
+    printf("driver_on_seat (1 or 0): ");
+    scanf("%d",&driver_on_seat);
 
-	// Hint : You can use scanf to obtain inputs for the sensors 
+    printf("driver_seat_belt_fastened (1 or 0): ");
+    scanf("%d",&driver_seat_belt_fastened);
 
+    printf("engine_running (1 or 0): ");
+    scanf("%d",&engine_running);
+
+    printf("doors_closed (1 or 0): ");
+    scanf("%d",&doors_closed);
+
+    printf("key_in_car (1 or 0): ");
+    scanf("%d",&key_in_car);
+
+    printf("door_lock_lever (1 or 0): ");
+    scanf("%d",&door_lock_lever);
+
+    printf("brake_pedal (1 or 0): ");
+    scanf("%d",&brake_pedal);
+
+    printf("car_moving (1 or 0): ");
+    scanf("%d",&car_moving);
+
+    printf("passenger_seat (1 or 0): ");
+    scanf("%d",&passenger_seat);
+
+    printf("high_speed_collision (1 or 0): ");
+    scanf("%d",&high_speed_collision);
 }
 
 void write_output_to_op_if(){
-
-    // 2. Provide your output code here
-    // This function should display/print the state of the 3 actuators (DLA/BELL/BA)
+    printf("Bell : %d \nDoor_lock_actuator : %d \nBrake_actuator : %d \nPassenger_airbag_actuator : %d",bell,door_lock_actu,brake_actu,passenger_airbag_actu);
 }
 
 
@@ -142,35 +166,38 @@ int main(int argc, char *argv[])
         and your code written from 1-3 to the lab report 
     */
 
-    int test[8][8] = {  {0, 0, 0, 0, 0, 0, 0, 0}, 
-                        {1, 1, 0, 0, 1, 0, 1, 0}, 
-                        {0, 1, 0, 1, 1, 1, 1, 1}, 
-                        {1, 0, 1, 0, 1, 0, 0, 0}, 
-                        {1, 0, 1, 1, 1, 1, 0, 1}, 
-                        {1, 1, 1, 0, 1, 0, 1, 0}, 
-                        {1, 1, 1, 1, 1, 1, 1, 1}, 
-                        {1, 0, 0, 0, 1, 0, 0, 1} };
-    for (int i = 0; i < 8; i++) {
-        bell = 0;
-        door_lock_actu = 0;
-        brake_actu = 0;
+    // int test[8][8] = {  {0, 0, 0, 0, 0, 0, 0, 0}, 
+    //                     {1, 1, 0, 0, 1, 0, 1, 0}, 
+    //                     {0, 1, 0, 1, 1, 1, 1, 1}, 
+    //                     {1, 0, 1, 0, 1, 0, 0, 0}, 
+    //                     {1, 0, 1, 1, 1, 1, 0, 1}, 
+    //                     {1, 1, 1, 0, 1, 0, 1, 0}, 
+    //                     {1, 1, 1, 1, 1, 1, 1, 1}, 
+    //                     {1, 0, 0, 0, 1, 0, 0, 1} };
+    // for (int i = 0; i < 8; i++) {
+    //     bell = 0;
+    //     door_lock_actu = 0;
+    //     brake_actu = 0;
 
-        driver_on_seat = test[i][0]; 
-        driver_seat_belt_fastened = test[i][1];
-        engine_running = test[i][2];
-        doors_closed = test[i][3];
-        key_in_car = test[i][4];
-        door_lock_lever = test[i][5];
-        brake_pedal = test[i][6];
-        car_moving = test[i][7];
+    //     driver_on_seat = test[i][0]; 
+    //     driver_seat_belt_fastened = test[i][1];
+    //     engine_running = test[i][2];
+    //     doors_closed = test[i][3];
+    //     key_in_car = test[i][4];
+    //     door_lock_lever = test[i][5];
+    //     brake_pedal = test[i][6];
+    //     car_moving = test[i][7];
         
-        control_action();
-        printf("Test %d: ", i);
-        printf("\n %d %d %d %d %d %d %d %d ", driver_on_seat, driver_seat_belt_fastened, 
-                                            engine_running, doors_closed, key_in_car, 
-                                            door_lock_lever, brake_pedal, car_moving);
-        //write_output_to_op_if();
-    }
+    //     control_action();
+    //     printf("Test %d: ", i);
+    //     printf(" %d %d %d %d %d %d %d %d \n", driver_on_seat, driver_seat_belt_fastened, 
+    //                                         engine_running, doors_closed, key_in_car, 
+    //                                         door_lock_lever, brake_pedal, car_moving);
 
+    //     write_output_to_op_if();
+    // }
+    read_inputs_from_ip_if();
+    control_action();
+    write_output_to_op_if();
     return 0;
 }

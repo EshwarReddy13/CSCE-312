@@ -48,9 +48,49 @@ void control_action(){
     */
 
     //if (engine_running && !doors_closed) bell = 1;
+    
+    
+
+    // I just converted the if then else statements in problem 3 to be binary input (i.e converted the decimal to binary)
+    // The use of hex seems unecessary here cause we can just check the input if certain values are true or false (1 or 0) and produce the output
     if ((input & 12) == 4) 
       output = output | 1;
 
+    if((input & 4) == 4){
+        output = output | 1;
+    }else if((input & 14)==14){
+        output = output | 0;
+    }else if((input & 0)==0){
+        output = output | 0;
+    }else{
+        output = output | 0;
+    }
+
+    if((input & 49)==49){
+        output = output | 2;
+    }else if((input & 48)==48){
+        output = output | 0;
+    }else{
+        output = output | 0;
+    }
+
+    if((input & 192)==192){
+        output = output | 4;
+    }else if((input & 64)==64){
+        output = output | 0;
+    }else if((input & 128)==128){
+        output = output | 0;
+    }else{
+        output = output | 0;
+    }
+
+    if((input & 768)==768){
+        output = output | 8;
+    }else if((input & 256)==256){
+        output = output | 0;
+    }else{
+        output = output |0;
+    }
 }
 
 /* ---     You should not have to modify anything below this line ---------*/
@@ -100,3 +140,5 @@ int main(int argc, char *argv[])
 
     return 0;
 }
+
+
