@@ -33,7 +33,44 @@ inline void control_action(){
     // Put your control/decision logic code segments inside this function
     // This is the actual code whose execution time which is being measure
 
+        if ((input & 12) == 4) 
+      output = output | 1;
 
+    if((input & 4) == 4){
+        output = output | 1;
+    }else if((input & 14)==14){
+        output = output | 0;
+    }else if((input & 0)==0){
+        output = output | 0;
+    }else{
+        output = output | 0;
+    }
+
+    if((input & 49)==49){
+        output = output | 2;
+    }else if((input & 48)==48){
+        output = output | 0;
+    }else{
+        output = output | 0;
+    }
+
+    if((input & 192)==192){
+        output = output | 4;
+    }else if((input & 64)==64){
+        output = output | 0;
+    }else if((input & 128)==128){
+        output = output | 0;
+    }else{
+        output = output | 0;
+    }
+
+    if((input & 768)==768){
+        output = output | 8;
+    }else if((input & 256)==256){
+        output = output | 0;
+    }else{
+        output = output |0;
+    }
 
 }
 
@@ -42,7 +79,8 @@ inline void read_inputs_from_ip_if(){
 
     //place your input code here
     //to read the current state of the available sensors
-
+	printf("input signal: ");
+	scanf("%d", &input);
 
 }
 
@@ -50,6 +88,7 @@ inline void write_output_to_op_if(){
 
     //place your output code here
     //to display/print the state of the 3 actuators (DLA/BELL/BA)
+    printf("output signal: %d\n", output);
 
 
 }
